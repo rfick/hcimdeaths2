@@ -3,8 +3,12 @@ from pathlib import Path
 from processPage import *
 
 page_url = 'https://secure.runescape.com/m=hiscore_oldschool_hardcore_ironman/overall?table=0&page='
+
 # 25 players per page
 numPages = 80
+
+# Only track top 200 for each boss KC
+numPagesKC = 8
 
 #Order in which stats appear in the HTML table
 statOrder = ["overall", "attack", "defence", "strength", "hitpoints", "ranged", "prayer", "magic", "cooking", \
@@ -32,6 +36,16 @@ else:
 newTrackedPlayers = {}
 
 processPage(page_url, numPages, statOrder, kcOrder, trackedPlayers, newTrackedPlayers)
+
+# Check kc pages
+# table=13 -> Abyssal Sire
+# table=60 -> Zulrah
+firstKcTracked = 13
+lastKcTracked = 60
+for i in range(firstKcTracked, lastKcTracked+1):
+	print('Processing kc table {}/{}'.format(i-firstKcTracked, lastKcTracked-firstKcTracked))
+	kc_page_url = 'https://secure.runescape.com/m=hiscore_oldschool_hardcore_ironman/overall?category_type=1&table={}&page='.format(str(i))
+	processPage(kc_page_url, numPagesKC, statOrder, kcOrder, trackedPlayers, newTrackedPlayers)
 
 with open(outFileName, 'wb') as f:
 	pickle.dump(newTrackedPlayers, f)
