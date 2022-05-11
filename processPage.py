@@ -7,7 +7,7 @@ from drawStatsImage import *
 from sendDeathTweet import *
 from utils import *
 
-def processPage(page_url, numPages, statOrder, kcOrder, trackedPlayers, newTrackedPlayers):
+def processPage(page_url, numPages, statOrder, kcOrder, kcDispNames, trackedPlayers, newTrackedPlayers):
 	try:
 		session = HTMLSession()
 
@@ -48,10 +48,10 @@ def processPage(page_url, numPages, statOrder, kcOrder, trackedPlayers, newTrack
 									deathTime = deathTime[13:30]
 									print('#{} {} IS DEAD AT {}'.format(rank, name, deathTime))
 
-									playa = getPlayerStats(name, deathTime, statOrder, kcOrder)
-									deathFileLocation = drawStatsImage(playa)
+									deadGuy = getPlayerStats(name, deathTime, statOrder, kcOrder)
+									deathFileLocation = drawStatsImage(deadGuy)
 
-									sendDeathTweet(deathFileLocation, playa.name)
+									sendDeathTweet(deathFileLocation, deadGuy, kcOrder[12:], kcDispNames[12:])
 
 								newTrackedPlayers[name] = 1
 							else:

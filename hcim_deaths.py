@@ -23,6 +23,15 @@ kcOrder = ["bountyHunterHunter", "bountyHunterRogue", "clueScrollsAll", "clueScr
 		   "krilTsutsaroth", "mimic", "nex", "nightmare", "phosanisNightmare", "obor", "sarachnis", "scorpia", \
 		   "skotizo", "tempoross", "gauntlet", "corruptedGauntlet", "tob", "tobHM", "thermonuclearSmokeDevil", \
 		   "tzKalZuk", "tzTokJad", "venenatis", "vetion", "vorkath", "wintertodt", "zalcano", "zulrah"]
+kcDispNames = ["Bounty Hunter - Hunter", "Bounty Hunter - Rogue", "Clue Scrolls - All", "Clue Scrolls - Beginner", "Clue Scrolls - Easy", \
+		   "Clue Scrolls - Medium", "Clue Scrolls - Hard", "Clue Scrolls - Elite", "Clue Scrolls - Master", "LMS", "Soul Wars Zeal", \
+		   "Rifts Closed", "Abyssal Sire", "Alchemical Hydra", "Barrows Chests", "Bryophyta", "Callisto", "Cerberus", \
+		   "COX", "COX CM", "Chaos Elemental", "Chaos Fanatic", "Commander Zilyana", "Corporeal Beast", "Crazy Archaeologist", \
+		   "Daggannoth Prime", "Daggannoth Rex", "Daggannoth Supreme", "Deranged Archaeologist", "General Graardor", \
+		   "Giant Mole", "Grotesque Guardians", "Hespori", "Kalphite Queen", "King Black Dragon", "Kraken", "Kree'arra", \
+		   "K'ril Tsutsaroth", "Mimic", "Nex", "Nightmare", "Phosani's Nightmare", "Obor", "Sarachnis", "Scorpia", \
+		   "Skotizo", "Tempoross", "Gauntlet", "Corrupted Gauntlet", "TOB", "TOB HM", "Thermonuclear Smoke Devil", \
+		   "Inferno", "Fight Caves", "Venenatis", "Vet'ion", "Vorkath", "Wintertodt", "Zalcano", "Zulrah"]
 
 outFileName = 'trackedPlayers.pkl'
 # If dicitonary of tracked players doesn't exist create a new blank one
@@ -35,7 +44,7 @@ else:
 # 1 = Dead, 0 = Alive
 newTrackedPlayers = {}
 
-processPage(page_url, numPages, statOrder, kcOrder, trackedPlayers, newTrackedPlayers)
+processPage(page_url, numPages, statOrder, kcOrder, kcDispNames, trackedPlayers, newTrackedPlayers)
 
 # Check kc pages
 # table=13 -> Abyssal Sire
@@ -45,7 +54,7 @@ lastKcTracked = 60
 for i in range(firstKcTracked, lastKcTracked+1):
 	print('Processing kc table {}/{}'.format(i-firstKcTracked, lastKcTracked-firstKcTracked))
 	kc_page_url = 'https://secure.runescape.com/m=hiscore_oldschool_hardcore_ironman/overall?category_type=1&table={}&page='.format(str(i))
-	processPage(kc_page_url, numPagesKC, statOrder, kcOrder, trackedPlayers, newTrackedPlayers)
+	processPage(kc_page_url, numPagesKC, statOrder, kcOrder, kcDispNames, trackedPlayers, newTrackedPlayers)
 
 with open(outFileName, 'wb') as f:
 	pickle.dump(newTrackedPlayers, f)
