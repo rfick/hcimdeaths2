@@ -3,6 +3,17 @@ from PIL import ImageFont
 from PIL import ImageDraw
 from PIL import ImageOps
 
+def resizeIcon(image, maxSize):
+	currentWidth = image.size[0]
+	currentHeight = image.size[1]
+	maxWidth = maxSize[0]
+	maxHeight = maxSize[1]
+	ratio = min(maxWidth/currentWidth, maxHeight/currentHeight)
+	newWidth = int(currentWidth*ratio)
+	newHeight = int(currentHeight*ratio)
+	image = image.resize((newWidth,newHeight), resample=Image.LANCZOS)
+	return image
+
 #Draws an output image for a dead hcim o7
 def drawStatsImage(deadGuy):
 	img = Image.open('image_template/bg-lg.png')
@@ -33,117 +44,117 @@ def drawStatsImage(deadGuy):
 
 	draw.text((column1Ind, row1Ind), str(deadGuy.attack.level), (0,0,0), font=font)
 	attackIcon = Image.open('image_template/stat_icons/Attack_icon.png', 'r')
-	attackIcon = attackIcon.resize(newIconSize)
+	attackIcon = resizeIcon(attackIcon, newIconSize)
 	img.paste(attackIcon, (column1Ind+iconOffsetColumn, row1Ind+iconOffsetRow), attackIcon.convert('RGBA'))
 
 	draw.text((column1Ind, row2Ind), str(deadGuy.strength.level), (0,0,0), font=font)
 	strengthIcon = Image.open('image_template/stat_icons/Strength_icon.png', 'r')
-	strengthIcon = strengthIcon.resize(newIconSize)
+	strengthIcon = resizeIcon(strengthIcon, newIconSize)
 	img.paste(strengthIcon, (column1Ind+iconOffsetColumn, row2Ind+iconOffsetRow), strengthIcon.convert('RGBA'))
 
 	draw.text((column1Ind, row3Ind), str(deadGuy.defence.level), (0,0,0), font=font)
 	defenceIcon = Image.open('image_template/stat_icons/Defence_icon.png', 'r')
-	defenceIcon = defenceIcon.resize(newIconSize)
+	defenceIcon = resizeIcon(defenceIcon, newIconSize)
 	img.paste(defenceIcon, (column1Ind+iconOffsetColumn, row3Ind+iconOffsetRow), defenceIcon.convert('RGBA'))
 
 	draw.text((column1Ind, row4Ind), str(deadGuy.ranged.level), (0,0,0), font=font)
 	rangedIcon = Image.open('image_template/stat_icons/Ranged_icon.png', 'r')
-	rangedIcon = rangedIcon.resize(newIconSize)
+	rangedIcon = resizeIcon(rangedIcon, newIconSize)
 	img.paste(rangedIcon, (column1Ind+iconOffsetColumn, row4Ind+iconOffsetRow), rangedIcon.convert('RGBA'))
 
 	draw.text((column1Ind, row5Ind), str(deadGuy.prayer.level), (0,0,0), font=font)
 	prayerIcon = Image.open('image_template/stat_icons/Prayer_icon.png', 'r')
-	prayerIcon = prayerIcon.resize(newIconSize)
+	prayerIcon = resizeIcon(prayerIcon, newIconSize)
 	img.paste(prayerIcon, (column1Ind+iconOffsetColumn, row5Ind+iconOffsetRow), prayerIcon.convert('RGBA'))
 
 	draw.text((column1Ind, row6Ind), str(deadGuy.magic.level), (0,0,0), font=font)
 	magicIcon = Image.open('image_template/stat_icons/Magic_icon.png', 'r')
-	magicIcon = magicIcon.resize(newIconSize)
+	magicIcon = resizeIcon(magicIcon, newIconSize)
 	img.paste(magicIcon, (column1Ind+iconOffsetColumn, row6Ind+iconOffsetRow), magicIcon.convert('RGBA'))
 
 	draw.text((column1Ind, row7Ind), str(deadGuy.runecraft.level), (0,0,0), font=font)
 	runecraftIcon = Image.open('image_template/stat_icons/Runecraft_icon.png', 'r')
-	runecraftIcon = runecraftIcon.resize(newIconSize)
+	runecraftIcon = resizeIcon(runecraftIcon, newIconSize)
 	img.paste(runecraftIcon, (column1Ind+iconOffsetColumn, row7Ind+iconOffsetRow), runecraftIcon.convert('RGBA'))
 
 	draw.text((column1Ind, row8Ind), str(deadGuy.construction.level), (0,0,0), font=font)
 	constructionIcon = Image.open('image_template/stat_icons/Construction_icon.png', 'r')
-	constructionIcon = constructionIcon.resize(newIconSize)
+	constructionIcon = resizeIcon(constructionIcon, newIconSize)
 	img.paste(constructionIcon, (column1Ind+iconOffsetColumn, row8Ind+iconOffsetRow), constructionIcon.convert('RGBA'))
 
 	draw.text((column2Ind, row1Ind), str(deadGuy.hitpoints.level), (0,0,0), font=font)
 	hitpointsIcon = Image.open('image_template/stat_icons/Hitpoints_icon.png', 'r')
-	hitpointsIcon = hitpointsIcon.resize(newIconSize)
+	hitpointsIcon = resizeIcon(hitpointsIcon, newIconSize)
 	img.paste(hitpointsIcon, (column2Ind+iconOffsetColumn, row1Ind+iconOffsetRow), hitpointsIcon.convert('RGBA'))
 
 	draw.text((column2Ind, row2Ind), str(deadGuy.agility.level), (0,0,0), font=font)
 	agilityIcon = Image.open('image_template/stat_icons/Agility_icon.png', 'r')
-	agilityIcon = agilityIcon.resize(newIconSize)
+	agilityIcon = resizeIcon(agilityIcon, newIconSize)
 	img.paste(agilityIcon, (column2Ind+iconOffsetColumn, row2Ind+iconOffsetRow), agilityIcon.convert('RGBA'))
 
 	draw.text((column2Ind, row3Ind), str(deadGuy.herblore.level), (0,0,0), font=font)
 	herbloreIcon = Image.open('image_template/stat_icons/Herblore_icon.png', 'r')
-	herbloreIcon = herbloreIcon.resize(newIconSize)
+	herbloreIcon = resizeIcon(herbloreIcon, newIconSize)
 	img.paste(herbloreIcon, (column2Ind+iconOffsetColumn, row3Ind+iconOffsetRow), herbloreIcon.convert('RGBA'))
 
 	draw.text((column2Ind, row4Ind), str(deadGuy.thieving.level), (0,0,0), font=font)
 	thievingIcon = Image.open('image_template/stat_icons/Thieving_icon.png', 'r')
-	thievingIcon = thievingIcon.resize(newIconSize)
+	thievingIcon = resizeIcon(thievingIcon, newIconSize)
 	img.paste(thievingIcon, (column2Ind+iconOffsetColumn, row4Ind+iconOffsetRow), thievingIcon.convert('RGBA'))
 
 	draw.text((column2Ind, row5Ind), str(deadGuy.crafting.level), (0,0,0), font=font)
 	craftingIcon = Image.open('image_template/stat_icons/Crafting_icon.png', 'r')
-	craftingIcon = craftingIcon.resize(newIconSize)
+	craftingIcon = resizeIcon(craftingIcon, newIconSize)
 	img.paste(craftingIcon, (column2Ind+iconOffsetColumn, row5Ind+iconOffsetRow), craftingIcon.convert('RGBA'))
 
 	draw.text((column2Ind, row6Ind), str(deadGuy.fletching.level), (0,0,0), font=font)
 	fletchingIcon = Image.open('image_template/stat_icons/Fletching_icon.png', 'r')
-	fletchingIcon = fletchingIcon.resize(newIconSize)
+	fletchingIcon = resizeIcon(fletchingIcon, newIconSize)
 	img.paste(fletchingIcon, (column2Ind+iconOffsetColumn, row6Ind+iconOffsetRow), fletchingIcon.convert('RGBA'))
 
 	draw.text((column2Ind, row7Ind), str(deadGuy.slayer.level), (0,0,0), font=font)
 	slayerIcon = Image.open('image_template/stat_icons/Slayer_icon.png', 'r')
-	slayerIcon = slayerIcon.resize(newIconSize)
+	slayerIcon = resizeIcon(slayerIcon, newIconSize)
 	img.paste(slayerIcon, (column2Ind+iconOffsetColumn, row7Ind+iconOffsetRow), slayerIcon.convert('RGBA'))
 
 	draw.text((column2Ind, row8Ind), str(deadGuy.hunter.level), (0,0,0), font=font)
 	hunterIcon = Image.open('image_template/stat_icons/Hunter_icon.png', 'r')
-	hunterIcon = hunterIcon.resize(newIconSize)
+	hunterIcon = resizeIcon(hunterIcon, newIconSize)
 	img.paste(hunterIcon, (column2Ind+iconOffsetColumn, row8Ind+iconOffsetRow), hunterIcon.convert('RGBA'))
 
 	draw.text((column3Ind, row1Ind), str(deadGuy.mining.level), (0,0,0), font=font)
 	miningIcon = Image.open('image_template/stat_icons/Mining_icon.png', 'r')
-	miningIcon = miningIcon.resize(newIconSize)
+	miningIcon = resizeIcon(miningIcon, newIconSize)
 	img.paste(miningIcon, (column3Ind+iconOffsetColumn, row1Ind+iconOffsetRow), miningIcon.convert('RGBA'))
 
 	draw.text((column3Ind, row2Ind), str(deadGuy.smithing.level), (0,0,0), font=font)
 	smithingIcon = Image.open('image_template/stat_icons/Smithing_icon.png', 'r')
-	smithingIcon = smithingIcon.resize(newIconSize)
+	smithingIcon = resizeIcon(smithingIcon, newIconSize)
 	img.paste(smithingIcon, (column3Ind+iconOffsetColumn, row2Ind+iconOffsetRow), smithingIcon.convert('RGBA'))
 
 	draw.text((column3Ind, row3Ind), str(deadGuy.fishing.level), (0,0,0), font=font)
 	fishingIcon = Image.open('image_template/stat_icons/Fishing_icon.png', 'r')
-	fishingIcon = fishingIcon.resize(newIconSize)
+	fishingIcon = resizeIcon(fishingIcon, newIconSize)
 	img.paste(fishingIcon, (column3Ind+iconOffsetColumn, row3Ind+iconOffsetRow), fishingIcon.convert('RGBA'))
 
 	draw.text((column3Ind, row4Ind), str(deadGuy.cooking.level), (0,0,0), font=font)
 	cookingIcon = Image.open('image_template/stat_icons/Cooking_icon.png', 'r')
-	cookingIcon = cookingIcon.resize(newIconSize)
+	cookingIcon = resizeIcon(cookingIcon, newIconSize)
 	img.paste(cookingIcon, (column3Ind+iconOffsetColumn, row4Ind+iconOffsetRow), cookingIcon.convert('RGBA'))
 
 	draw.text((column3Ind, row5Ind), str(deadGuy.firemaking.level), (0,0,0), font=font)
 	firemakingIcon = Image.open('image_template/stat_icons/Firemaking_icon.png', 'r')
-	firemakingIcon = firemakingIcon.resize(newIconSize)
+	firemakingIcon = resizeIcon(firemakingIcon, newIconSize)
 	img.paste(firemakingIcon, (column3Ind+iconOffsetColumn, row5Ind+iconOffsetRow), firemakingIcon.convert('RGBA'))
 
 	draw.text((column3Ind, row6Ind), str(deadGuy.woodcutting.level), (0,0,0), font=font)
 	woodcuttingIcon = Image.open('image_template/stat_icons/Woodcutting_icon.png', 'r')
-	woodcuttingIcon = woodcuttingIcon.resize(newIconSize)
+	woodcuttingIcon = resizeIcon(woodcuttingIcon, newIconSize)
 	img.paste(woodcuttingIcon, (column3Ind+iconOffsetColumn, row6Ind+iconOffsetRow), woodcuttingIcon.convert('RGBA'))
 
 	draw.text((column3Ind, row7Ind), str(deadGuy.farming.level), (0,0,0), font=font)
 	farmingIcon = Image.open('image_template/stat_icons/Farming_icon.png', 'r')
-	farmingIcon = farmingIcon.resize(newIconSize)
+	farmingIcon = resizeIcon(farmingIcon, newIconSize)
 	img.paste(farmingIcon, (column3Ind+iconOffsetColumn, row7Ind+iconOffsetRow), farmingIcon.convert('RGBA'))
 
 	draw.text((column3Ind+totalLvlOffsetColumn, row8Ind+totalLvlTextOffsetRow), 'Total:', (0,0,0), font=font)
@@ -151,16 +162,16 @@ def drawStatsImage(deadGuy):
 
 
 
-	kciconOffsetColumn = -35
-	kciconOffsetRow = 8
-	kccolumn1Ind = 610
+	kciconOffsetColumn = -55
+	kciconOffsetRow = 2
+	kccolumn1Ind = 620
 	kccolumnIncrement = 200
 	kccolumn2Ind = kccolumn1Ind + 1*(kccolumnIncrement)
 	kccolumn3Ind = kccolumn1Ind + 2*(kccolumnIncrement)
 	kccolumn4Ind = kccolumn1Ind + 3*(kccolumnIncrement)
 	kcrow1Ind = 97
 	kcrowIncrement = 60
-	kcnewIconSize = (30, 30)
+	kcnewIconSize = (45, 45)
 
 	kcOrder = ["clueScrollsAll", "clueScrollsBeginner", "clueScrollsEasy", \
 		   "clueScrollsMedium", "clueScrollsHard", "clueScrollsElite", "clueScrollsMaster", "soulWarsZeal", \
@@ -185,28 +196,28 @@ def drawStatsImage(deadGuy):
 	for i in range(kcNumRows):
 		draw.text((kccolumn1Ind, kcrow1Ind+(i*kcrowIncrement)), str(getattr(deadGuy, kcOrder[i]).score), (0,0,0), font=kcfont)
 		icon = Image.open('image_template/kc_icons/'+kcIconFilenames[i]+'.png', 'r')
-		icon.thumbnail(kcnewIconSize)
+		icon = resizeIcon(icon, kcnewIconSize)
 		img.paste(icon, (kccolumn1Ind+kciconOffsetColumn, kcrow1Ind+(i*kcrowIncrement)+kciconOffsetRow), icon.convert('RGBA'))
 
 	arrayOffset = 16
 	for i in range(kcNumRows):
 		draw.text((kccolumn2Ind, kcrow1Ind+(i*kcrowIncrement)), str(getattr(deadGuy, kcOrder[i+arrayOffset]).score), (0,0,0), font=kcfont)
 		icon = Image.open('image_template/kc_icons/'+kcIconFilenames[i+arrayOffset]+'.png', 'r')
-		icon.thumbnail(kcnewIconSize)
+		icon = resizeIcon(icon, kcnewIconSize)
 		img.paste(icon, (kccolumn2Ind+kciconOffsetColumn, kcrow1Ind+(i*kcrowIncrement)+kciconOffsetRow), icon.convert('RGBA'))
 
 	arrayOffset = 32
 	for i in range(kcNumRows):
 		draw.text((kccolumn3Ind, kcrow1Ind+(i*kcrowIncrement)), str(getattr(deadGuy, kcOrder[i+arrayOffset]).score), (0,0,0), font=kcfont)
 		icon = Image.open('image_template/kc_icons/'+kcIconFilenames[i+arrayOffset]+'.png', 'r')
-		icon.thumbnail(kcnewIconSize)
+		icon = resizeIcon(icon, kcnewIconSize)
 		img.paste(icon, (kccolumn3Ind+kciconOffsetColumn, kcrow1Ind+(i*kcrowIncrement)+kciconOffsetRow), icon.convert('RGBA'))
 
 	arrayOffset = 48
 	for i in range(len(kcOrder)-arrayOffset):
 		draw.text((kccolumn4Ind, kcrow1Ind+(i*kcrowIncrement)), str(getattr(deadGuy, kcOrder[i+arrayOffset]).score), (0,0,0), font=kcfont)
 		icon = Image.open('image_template/kc_icons/'+kcIconFilenames[i+arrayOffset]+'.png', 'r')
-		icon.thumbnail(kcnewIconSize)
+		icon = resizeIcon(icon, kcnewIconSize)
 		img.paste(icon, (kccolumn4Ind+kciconOffsetColumn, kcrow1Ind+(i*kcrowIncrement)+kciconOffsetRow), icon.convert('RGBA'))
 
 	deathFileLocation = 'image_template/death_images/'+deadGuy.name+'.png'
