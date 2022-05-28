@@ -70,10 +70,10 @@ def checkHiScores():
 	current_time = now.strftime("%H:%M:%S")
 	print('Hiscores check complete at {}.'.format(current_time))
 
-#Begin in 1 minute, update every 1.5 hrs after
+#Begin in 1 minute, update every 2 hrs after
 current_time = datetime.now()
 start_time = current_time + timedelta(minutes=1)
 
 scheduler = BlockingScheduler()
-scheduler.add_job(checkHiScores, 'interval', hours=1.5, start_date=start_time)
+scheduler.add_job(checkHiScores, 'interval', hours=2, start_date=start_time)
 scheduler.start()
