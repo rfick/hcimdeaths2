@@ -22,7 +22,7 @@ def checkHiScores():
 				 "woodcutting", "fletching", "fishing", "firemaking", "crafting", "smithing", "mining", "herblore", \
 				 "agility", "thieving", "slayer", "farming", "runecraft", "hunter", "construction"]
 	kcOrder = ["bountyHunterHunter", "bountyHunterRogue", "clueScrollsAll", "clueScrollsBeginner", "clueScrollsEasy", \
-			   "clueScrollsMedium", "clueScrollsHard", "clueScrollsElite", "clueScrollsMaster", "lms", "soulWarsZeal", \
+			   "clueScrollsMedium", "clueScrollsHard", "clueScrollsElite", "clueScrollsMaster", "lms", "pvpArena", "soulWarsZeal", \
 			   "riftsClosed", "abyssalSire", "alchemicalHydra", "barrowsChests", "bryophyta", "callisto", "cerberus", \
 			   "cox", "coxCM", "chaosElemental", "chaosFanatic", "commanderZilyana", "corporealBeast", "crazyArchaeologist", \
 			   "daggannothPrime", "daggannothRex", "daggannothSupreme", "derangedArchaeologist", "generalGraardor", \
@@ -31,7 +31,7 @@ def checkHiScores():
 			   "skotizo", "tempoross", "gauntlet", "corruptedGauntlet", "tob", "tobHM", "thermonuclearSmokeDevil", \
 			   "tzKalZuk", "tzTokJad", "venenatis", "vetion", "vorkath", "wintertodt", "zalcano", "zulrah"]
 	kcDispNames = ["Bounty Hunter - Hunter", "Bounty Hunter - Rogue", "Clue Scrolls - All", "Clue Scrolls - Beginner", "Clue Scrolls - Easy", \
-			   "Clue Scrolls - Medium", "Clue Scrolls - Hard", "Clue Scrolls - Elite", "Clue Scrolls - Master", "LMS", "Soul Wars Zeal", \
+			   "Clue Scrolls - Medium", "Clue Scrolls - Hard", "Clue Scrolls - Elite", "Clue Scrolls - Master", "LMS", "PVP Arena", "Soul Wars Zeal", \
 			   "Rifts Closed", "Abyssal Sire", "Alchemical Hydra", "Barrows Chests", "Bryophyta", "Callisto", "Cerberus", \
 			   "COX", "COX CM", "Chaos Elemental", "Chaos Fanatic", "Commander Zilyana", "Corporeal Beast", "Crazy Archaeologist", \
 			   "Daggannoth Prime", "Daggannoth Rex", "Daggannoth Supreme", "Deranged Archaeologist", "General Graardor", \

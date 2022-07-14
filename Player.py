@@ -47,6 +47,7 @@ class Player:
 	clueScrollsElite = kcInfo()
 	clueScrollsMaster = kcInfo()
 	lms = kcInfo()
+	pvpArena = kcInfo()
 	soulWarsZeal = kcInfo()
 	riftsClosed = kcInfo()
 	abyssalSire = kcInfo()
