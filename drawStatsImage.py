@@ -181,6 +181,7 @@ def drawStatsImage(deadGuy):
 		   "giantMole", "grotesqueGuardians", "hespori", "kalphiteQueen", "kingBlackDragon", "kraken", "kreearra", \
 		   "krilTsutsaroth", "mimic", "nex", "nightmare", "phosanisNightmare", "obor", "sarachnis", "scorpia", \
 		   "skotizo", "tempoross", "gauntlet", "corruptedGauntlet", "tob", "tobHM", "thermonuclearSmokeDevil", \
+		   "toa", "toaExpert", \
 		   "tzKalZuk", "tzTokJad", "venenatis", "vetion", "vorkath", "wintertodt", "zalcano", "zulrah"]
 	kcIconFilenames = ["Clue_scroll_all", "Clue_scroll_(Beginner)", "Clue_scroll_(Easy)", \
 		   "Clue_scroll_(Medium)", "Clue_scroll_(Hard)", "Clue_scroll_(Elite)", "Clue_scroll_(Master)", "Lil'_creator", \
@@ -190,6 +191,7 @@ def drawStatsImage(deadGuy):
 		   "Baby_mole", "Noon", "Bottomless_compost_bucket", "Kalphite_princess_(2nd_form)", "Prince_black_dragon", "Pet_kraken", "Pet_kree'arra", \
 		   "Pet_k'ril_tsutsaroth", "Mimic", "Nexling", "Little_nightmare", "Parasitic_egg", "Hill_giant_club", "Sraracha", "Scorpia's_offspring", \
 		   "Skotos", "Tiny_tempor", "Youngllef", "Corrupted_youngllef", "Lil'_zik", "Sanguine_dust", "Pet_smoke_devil", \
+		   "Tombs_of_Amascut_Normal", "Tombs_of_Amascut_Expert", \
 		   "Infernal_cape", "Fire_cape", "Venenatis_spiderling", "Vet'ion_jr.", "Vorki", "Phoenix", "Smolcano", "Pet_snakeling"]
 
 	kcNumRows = 16

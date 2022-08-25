@@ -90,6 +90,8 @@ class Player:
 	tob = kcInfo()
 	tobHM = kcInfo()
 	thermonuclearSmokeDevil = kcInfo()
+	toa = kcInfo()
+	toaExpert = kcInfo()
 	tzKalZuk = kcInfo()
 	tzTokJad = kcInfo()
 	venenatis = kcInfo()

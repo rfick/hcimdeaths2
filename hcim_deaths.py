@@ -29,6 +29,7 @@ def checkHiScores():
 			   "giantMole", "grotesqueGuardians", "hespori", "kalphiteQueen", "kingBlackDragon", "kraken", "kreearra", \
 			   "krilTsutsaroth", "mimic", "nex", "nightmare", "phosanisNightmare", "obor", "sarachnis", "scorpia", \
 			   "skotizo", "tempoross", "gauntlet", "corruptedGauntlet", "tob", "tobHM", "thermonuclearSmokeDevil", \
+			   "toa", "toaExpert", \
 			   "tzKalZuk", "tzTokJad", "venenatis", "vetion", "vorkath", "wintertodt", "zalcano", "zulrah"]
 	kcDispNames = ["Bounty Hunter - Hunter", "Bounty Hunter - Rogue", "Clue Scrolls - All", "Clue Scrolls - Beginner", "Clue Scrolls - Easy", \
 			   "Clue Scrolls - Medium", "Clue Scrolls - Hard", "Clue Scrolls - Elite", "Clue Scrolls - Master", "LMS", "PVP Arena", "Soul Wars Zeal", \
@@ -38,6 +39,7 @@ def checkHiScores():
 			   "Giant Mole", "Grotesque Guardians", "Hespori", "Kalphite Queen", "King Black Dragon", "Kraken", "Kree'arra", \
 			   "K'ril Tsutsaroth", "Mimic", "Nex", "Nightmare", "Phosani's Nightmare", "Obor", "Sarachnis", "Scorpia", \
 			   "Skotizo", "Tempoross", "Gauntlet", "Corrupted Gauntlet", "TOB", "TOB HM", "Thermonuclear Smoke Devil", \
+			   "Tombs of Amascut", "Tombs of Amascut: Expert Mode", \
 			   "Inferno", "Fight Caves", "Venenatis", "Vet'ion", "Vorkath", "Wintertodt", "Zalcano", "Zulrah"]
 
 	outFileName = 'trackedPlayers.pkl'
