@@ -56,10 +56,10 @@ def checkHiScores():
 	processPage(page_url, numPages, statOrder, kcOrder, kcDispNames, trackedPlayers, newTrackedPlayers)
 
 	# Check kc pages
-	# table=13 -> Abyssal Sire
+	# table=13 -> Rifts Closed
 	# table=60 -> Zulrah
 	firstKcTracked = 13
-	lastKcTracked = 60
+	lastKcTracked = 63
 	for i in range(firstKcTracked, lastKcTracked+1):
 		print('Processing kc table {}/{}'.format(i-firstKcTracked, lastKcTracked-firstKcTracked))
 		kc_page_url = 'https://secure.runescape.com/m=hiscore_oldschool_hardcore_ironman/overall?category_type=1&table={}&page='.format(str(i))
