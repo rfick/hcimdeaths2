@@ -27,7 +27,7 @@ def checkHiScores():
 			   "cox", "coxCM", "chaosElemental", "chaosFanatic", "commanderZilyana", "corporealBeast", "crazyArchaeologist", \
 			   "daggannothPrime", "daggannothRex", "daggannothSupreme", "derangedArchaeologist", "generalGraardor", \
 			   "giantMole", "grotesqueGuardians", "hespori", "kalphiteQueen", "kingBlackDragon", "kraken", "kreearra", \
-			   "krilTsutsaroth", "mimic", "nex", "nightmare", "phosanisNightmare", "obor", "sarachnis", "scorpia", \
+			   "krilTsutsaroth", "mimic", "nex", "nightmare", "phosanisNightmare", "obor", "phantomMuspah", "sarachnis", "scorpia", \
 			   "skotizo", "tempoross", "gauntlet", "corruptedGauntlet", "tob", "tobHM", "thermonuclearSmokeDevil", \
 			   "toa", "toaExpert", \
 			   "tzKalZuk", "tzTokJad", "venenatis", "vetion", "vorkath", "wintertodt", "zalcano", "zulrah"]
@@ -37,7 +37,7 @@ def checkHiScores():
 			   "COX", "COX CM", "Chaos Elemental", "Chaos Fanatic", "Commander Zilyana", "Corporeal Beast", "Crazy Archaeologist", \
 			   "Daggannoth Prime", "Daggannoth Rex", "Daggannoth Supreme", "Deranged Archaeologist", "General Graardor", \
 			   "Giant Mole", "Grotesque Guardians", "Hespori", "Kalphite Queen", "King Black Dragon", "Kraken", "Kree'arra", \
-			   "K'ril Tsutsaroth", "Mimic", "Nex", "Nightmare", "Phosani's Nightmare", "Obor", "Sarachnis", "Scorpia", \
+			   "K'ril Tsutsaroth", "Mimic", "Nex", "Nightmare", "Phosani's Nightmare", "Obor", "Phantom Muspah", "Sarachnis", "Scorpia", \
 			   "Skotizo", "Tempoross", "Gauntlet", "Corrupted Gauntlet", "TOB", "TOB HM", "Thermonuclear Smoke Devil", \
 			   "Tombs of Amascut", "Tombs of Amascut: Expert Mode", \
 			   "Inferno", "Fight Caves", "Venenatis", "Vet'ion", "Vorkath", "Wintertodt", "Zalcano", "Zulrah"]
