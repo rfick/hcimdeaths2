@@ -175,22 +175,22 @@ def drawStatsImage(deadGuy):
 
 	kcOrder = ["clueScrollsAll", "clueScrollsBeginner", "clueScrollsEasy", \
 		   "clueScrollsMedium", "clueScrollsHard", "clueScrollsElite", "clueScrollsMaster", "soulWarsZeal", \
-		   "riftsClosed", "abyssalSire", "alchemicalHydra", "barrowsChests", "bryophyta", "callisto", "cerberus", \
+		   "riftsClosed", "abyssalSire", "alchemicalHydra", "artio", "barrowsChests", "bryophyta", "callisto", "calvarion", "cerberus", \
 		   "cox", "coxCM", "chaosElemental", "chaosFanatic", "commanderZilyana", "corporealBeast", "crazyArchaeologist", \
 		   "daggannothPrime", "daggannothRex", "daggannothSupreme", "derangedArchaeologist", "generalGraardor", \
 		   "giantMole", "grotesqueGuardians", "hespori", "kalphiteQueen", "kingBlackDragon", "kraken", "kreearra", \
 		   "krilTsutsaroth", "mimic", "nex", "nightmare", "phosanisNightmare", "obor", "phantomMuspah", "sarachnis", "scorpia", \
-		   "skotizo", "tempoross", "gauntlet", "corruptedGauntlet", "tob", "tobHM", "thermonuclearSmokeDevil", \
+		   "skotizo", "spindel", "tempoross", "gauntlet", "corruptedGauntlet", "tob", "tobHM", "thermonuclearSmokeDevil", \
 		   "toa", "toaExpert", \
 		   "tzKalZuk", "tzTokJad", "venenatis", "vetion", "vorkath", "wintertodt", "zalcano", "zulrah"]
 	kcIconFilenames = ["Clue_scroll_all", "Clue_scroll_(Beginner)", "Clue_scroll_(Easy)", \
 		   "Clue_scroll_(Medium)", "Clue_scroll_(Hard)", "Clue_scroll_(Elite)", "Clue_scroll_(Master)", "Lil'_creator", \
-		   "Abyssal_protector", "Abyssal_orphan", "Ikkle_hydra", "Chest_(Barrows_open)", "Bryophyta's_essence", "Callisto_cub", "Hellpuppy", \
+		   "Abyssal_protector", "Abyssal_orphan", "Ikkle_hydra", "Artio_cub", "Chest_(Barrows_open)", "Bryophyta's_essence", "Callisto_cub", "Cal'varion", "Hellpuppy", \
 		   "Olmlet", "Metamorphic_dust", "Pet_chaos_elemental", "Ancient_staff", "Pet_zilyana", "Pet_corporeal_critter", "Crazy_archaeologist_chathead", \
 		   "Pet_dagannoth_prime", "Pet_dagannoth_rex", "Pet_dagannoth_supreme", "Deranged_archaeologist_chathead", "Pet_general_graardor", \
 		   "Baby_mole", "Noon", "Bottomless_compost_bucket", "Kalphite_princess_(2nd_form)", "Prince_black_dragon", "Pet_kraken", "Pet_kree'arra", \
 		   "Pet_k'ril_tsutsaroth", "Mimic", "Nexling", "Little_nightmare", "Parasitic_egg", "Hill_giant_club", "Muphin", "Sraracha", "Scorpia's_offspring", \
-		   "Skotos", "Tiny_tempor", "Youngllef", "Corrupted_youngllef", "Lil'_zik", "Sanguine_dust", "Pet_smoke_devil", \
+		   "Skotos", "Spindel", "Tiny_tempor", "Youngllef", "Corrupted_youngllef", "Lil'_zik", "Sanguine_dust", "Pet_smoke_devil", \
 		   "Tombs_of_Amascut_Normal", "Tombs_of_Amascut_Expert", \
 		   "Infernal_cape", "Fire_cape", "Venenatis_spiderling", "Vet'ion_jr.", "Vorki", "Phoenix", "Smolcano", "Pet_snakeling"]
 

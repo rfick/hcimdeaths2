@@ -23,22 +23,22 @@ def checkHiScores():
 				 "agility", "thieving", "slayer", "farming", "runecraft", "hunter", "construction"]
 	kcOrder = ["bountyHunterHunter", "bountyHunterRogue", "clueScrollsAll", "clueScrollsBeginner", "clueScrollsEasy", \
 			   "clueScrollsMedium", "clueScrollsHard", "clueScrollsElite", "clueScrollsMaster", "lms", "pvpArena", "soulWarsZeal", \
-			   "riftsClosed", "abyssalSire", "alchemicalHydra", "barrowsChests", "bryophyta", "callisto", "cerberus", \
+			   "riftsClosed", "abyssalSire", "alchemicalHydra", "artio", "barrowsChests", "bryophyta", "callisto", "calvarion", "cerberus", \
 			   "cox", "coxCM", "chaosElemental", "chaosFanatic", "commanderZilyana", "corporealBeast", "crazyArchaeologist", \
 			   "daggannothPrime", "daggannothRex", "daggannothSupreme", "derangedArchaeologist", "generalGraardor", \
 			   "giantMole", "grotesqueGuardians", "hespori", "kalphiteQueen", "kingBlackDragon", "kraken", "kreearra", \
 			   "krilTsutsaroth", "mimic", "nex", "nightmare", "phosanisNightmare", "obor", "phantomMuspah", "sarachnis", "scorpia", \
-			   "skotizo", "tempoross", "gauntlet", "corruptedGauntlet", "tob", "tobHM", "thermonuclearSmokeDevil", \
+			   "skotizo", "spindel", "tempoross", "gauntlet", "corruptedGauntlet", "tob", "tobHM", "thermonuclearSmokeDevil", \
 			   "toa", "toaExpert", \
 			   "tzKalZuk", "tzTokJad", "venenatis", "vetion", "vorkath", "wintertodt", "zalcano", "zulrah"]
 	kcDispNames = ["Bounty Hunter - Hunter", "Bounty Hunter - Rogue", "Clue Scrolls - All", "Clue Scrolls - Beginner", "Clue Scrolls - Easy", \
 			   "Clue Scrolls - Medium", "Clue Scrolls - Hard", "Clue Scrolls - Elite", "Clue Scrolls - Master", "LMS", "PVP Arena", "Soul Wars Zeal", \
-			   "Rifts Closed", "Abyssal Sire", "Alchemical Hydra", "Barrows Chests", "Bryophyta", "Callisto", "Cerberus", \
+			   "Rifts Closed", "Abyssal Sire", "Alchemical Hydra", "Artio", "Barrows Chests", "Bryophyta", "Callisto", "Cal'varion", "Cerberus", \
 			   "COX", "COX CM", "Chaos Elemental", "Chaos Fanatic", "Commander Zilyana", "Corporeal Beast", "Crazy Archaeologist", \
 			   "Daggannoth Prime", "Daggannoth Rex", "Daggannoth Supreme", "Deranged Archaeologist", "General Graardor", \
 			   "Giant Mole", "Grotesque Guardians", "Hespori", "Kalphite Queen", "King Black Dragon", "Kraken", "Kree'arra", \
 			   "K'ril Tsutsaroth", "Mimic", "Nex", "Nightmare", "Phosani's Nightmare", "Obor", "Phantom Muspah", "Sarachnis", "Scorpia", \
-			   "Skotizo", "Tempoross", "Gauntlet", "Corrupted Gauntlet", "TOB", "TOB HM", "Thermonuclear Smoke Devil", \
+			   "Skotizo", "Spindel", "Tempoross", "Gauntlet", "Corrupted Gauntlet", "TOB", "TOB HM", "Thermonuclear Smoke Devil", \
 			   "Tombs of Amascut", "Tombs of Amascut: Expert Mode", \
 			   "Inferno", "Fight Caves", "Venenatis", "Vet'ion", "Vorkath", "Wintertodt", "Zalcano", "Zulrah"]
 
